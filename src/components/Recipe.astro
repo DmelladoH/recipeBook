@@ -1,0 +1,40 @@
+---
+interface Props {
+    title: string,
+    description: string,
+    cookingTime: number,
+    ingredients: string[],
+    instructions: string[],
+    picture: string,
+}
+
+const {title, description, cookingTime, ingredients, instructions, picture} = Astro.props
+---
+
+<div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+    <header class="bg-cover bg-center flex flex-col items-center md:flex-col-reverse p-5 md:col-span-2 order-2 md:order-first">
+        <div class="bg-white relative -top-10 w-[80%] p-2 rounded-lg md:top-0">
+            <h2 class="text-center text-4xl">{title}</h2>
+        </div>
+    </header>
+    
+    <div class="">
+        <img src={picture} alt={title} class="w-screen"/>
+    </div>
+        <section class="p-5 bg-yellow-200 rounded-lg order-3">
+            <h3>Ingredientes</h3>
+            <p>Loremyipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+        </section>
+        <section class="p-5 bg-yellow-200 rounded-lg order-4">
+            <h3>Ingredientes</h3>
+            <p>Loremyipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+        </section>
+        <section class="p-5 bg-yellow-200 rounded-lg order-5">
+            <h3>Ingredientes</h3>
+            <p>Loremyipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates minima officiis sunt asperiores hic illum laudantium quo ducimus veritatis cum rem id voluptatem expedita, dolorum modi vero nihil soluta atque?</p>
+        </section>
+       
+</div>

@@ -1,11 +1,12 @@
 ---
+import Recipe from '../../components/Recipe.astro';
 import Layout from '../../layouts/Layout.astro';
+import {parmesanRisotto} from "./recipe"
+
 ---
 
 <Layout title="Parmesan risotto">
 	<main>
-		<h1 class="text-3xl font-bold underline">
-			Parmesan Risotto
-		</h1>  
+        <Recipe {...parmesanRisotto} />
 	</main>
 </Layout>
