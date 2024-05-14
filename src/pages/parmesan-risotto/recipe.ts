@@ -2,7 +2,8 @@ import type { Recipe } from "../../type";
 
 export const parmesanRisotto: Recipe = {
   title: "Parmesan Risotto",
-  description: "",
+  description:
+    "El risotto de arroz con mantequilla y queso Parmigiano Reggiano es un exquisito plato italiano que destaca por su cremosidad y sabor. Comienza tostando el arroz en una cazuela con un toque de mantequilla, realzando su aroma y textura. Luego, se va agregando agua caliente poco a poco, permitiendo que el arroz absorba lentamente el líquido, cocinándose hasta alcanzar una consistencia tierna y cremosa. ",
   cookingTime: 30,
   ingredients: [
     "320g arroz",
