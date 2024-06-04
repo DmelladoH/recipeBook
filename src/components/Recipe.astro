@@ -11,20 +11,17 @@ interface Props {
 const {title, description, cookingTime, ingredients, instructions, picture} = Astro.props
 ---
 
-<div class="grid grid-cols-1 gap-10 md:grid-cols-2 bg-[#f1eddd] text-[#230f0f]" >
-    <header class="relative -top-[7rem] md:top-0 bg-cover bg-center flex flex-col items-center md:flex-col-reverse md:col-span-2 order-2 md:order-first">
-        <div class="p-2 rounded-lg bg-[#f1eddd] w-[80%]">
-            <h2 class="text-center text-4xl text-[#3b1a18]">{title}</h2>
+<div class="w-[375px] md:w-[640px] md:mt-10 mb-20">
+    <header>
+        <div class="flex justify-center">
+            <img src={picture} alt={title} width="100%" height="300px" class="md:rounded-lg"/>
+        </div>
+        <div class="grid gap-4 mt-5">
+            <h2 class="text-center text-5xl text-[#3b1a18]">{title}</h2>
+            <p>{description}</p>
         </div>
     </header>
-    
-    <div class="">
-        <img src={picture} alt={title} class="w-screen aspect-square"/>
-    </div>
-    <div class="order-3 p-5">
-        <p>{description}</p>
-    </div>
-    <section class="p-5 bg-[#eee29d] drop-shadow-[0_8px_8px_rgba(0,0,0,0.09)] rounded-lg order-4 h-min m-4">
+    <section class="p-5 mt-8 bg-[#eee29d] drop-shadow-[0_8px_8px_rgba(0,0,0,0.09)] rounded-lg  h-min m-4">
         <h3 class="text-xl topacity-85 bold uppercase">ingredientes</h3>
         <ul class="list-disc pl-8 grid gap-2 m-3">
             {
@@ -33,18 +30,16 @@ const {title, description, cookingTime, ingredients, instructions, picture} = As
                 ))
             }
         </ul>
-    </section>
-    <section class="p-5 order-5 h-min">
-        <h3>Pasos:</h3>
-        <ol class="list-decimal pl-8 grid gap-2 mt-3">
+    </section> 
+    
+    <section class="p-5  h-min">
+        <h3 class="text-xl topacity-85 bold uppercase">Pasos:</h3>
+        <ol class="list-decimal pl-8 grid gap-3 mt-3">
         {
             instructions.map(step => (
                 <li>{step}</li>
             ))
         }
         </ol>
-    </section>      
-    <footer class="my-5 order-6">
-        footer
-    </footer>
+    </section>          
 </div>
