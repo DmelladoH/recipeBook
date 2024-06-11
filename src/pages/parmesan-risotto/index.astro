@@ -2,10 +2,15 @@
 import Recipe from '../../components/Recipe.astro';
 import Layout from '../../layouts/Layout.astro';
 import {parmesanRisotto} from "./recipe"
-
 ---
 
 <Layout title="Parmesan risotto">
+	<!-- <header class="p-4 fixed z-50 flex w-screen text-x2">
+		<a href="/" class="flex gap-2 hover:text-gray-700">
+			<img src="/back.svg" height="24px" width="24px"/>
+			back to menu
+		</a>
+	</header> -->
 	<main>
         <Recipe {...parmesanRisotto} />
 	</main>
