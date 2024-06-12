@@ -1,6 +1,6 @@
 ---
 import Recipe from '../../components/Recipe.astro';
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../Layout.astro';
 import {parmesanRisotto} from "./recipe"
 ---
 
@@ -11,7 +11,7 @@ import {parmesanRisotto} from "./recipe"
 			back to menu
 		</a>
 	</header> -->
-	<main>
+	<main class="flex justify-center">
         <Recipe {...parmesanRisotto} />
 	</main>
 </Layout>

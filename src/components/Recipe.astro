@@ -7,7 +7,7 @@ interface Props {
     instructions: string[],
     picture: string,
 }
-// w-[375px]
+
 const {title, description, cookingTime, ingredients, instructions, picture} = Astro.props
 ---
 
@@ -19,6 +19,12 @@ const {title, description, cookingTime, ingredients, instructions, picture} = As
         <div class="grid gap-4 p-6">
             <h2 class="text-center text-5xl text-[#3b1a18]">{title}</h2>
             <p>{description}</p>
+        </div>
+        <div class="flex px-6">
+            <div class="flex gap-1 items-end">
+                <img src="/clock.svg" height="20" width="20" alt="tiempo de preparación"/>
+                <span>{cookingTime} min</span>
+            </div>
         </div>
     </header>
     <section class="p-5 mt-8 bg-[#eee29d] drop-shadow-[0_8px_8px_rgba(0,0,0,0.09)] rounded-lg  h-min m-4">

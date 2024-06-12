@@ -1,0 +1,27 @@
+---
+import "../../global.css"
+interface props {
+    img: string,
+    name: string,
+    cookingTime: number,
+    href: string,
+}
+
+const {img, name, cookingTime, href} = Astro.props
+---
+<article class="hover:scale-105 transition-all duration-500 featured max-w-80">
+    <a href={href}>
+        <header>
+            <img src={img} alt={name} class="rounded-lg h-[163px]" />
+        </header>
+        <div class="p-2">
+            <h4 class="text-xl">{name}</h4>
+            <div class="flex">
+                <div class="flex gap-2">
+                    <img src="/clock.svg" height="14" width="14" alt="tiempo de preparación"/>
+                    <span>{cookingTime} min</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
