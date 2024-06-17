@@ -33,6 +33,6 @@ export const parmesanRisotto: Recipe = {
     },
   ],
 
-  videoURL: "https://www.youtube.com/watch?v=ANZTOPW_j7k&t=356s",
+  videoId: "ANZTOPW_j7k",
   picture: "/parmesan-risotto.jpg",
 };

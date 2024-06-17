@@ -74,6 +74,6 @@ export const cuscusConCarnePicada: Recipe = {
       ],
     },
   ],
-  videoURL: "https://www.youtube.com/watch?v=IO4Z0anzIog&t=458s",
+  videoId: "IO4Z0anzIog",
   picture: "/cuscus-carne-picada.jpg",
 };

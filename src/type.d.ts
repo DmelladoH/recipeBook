@@ -5,7 +5,7 @@ export interface Recipe {
   ingredients: IngredientGroup[];
   steps: stepsGroup[];
   picture: string;
-  videoURL?: string;
+  videoId?: string;
 }
 
 export interface IngredientGroup {
