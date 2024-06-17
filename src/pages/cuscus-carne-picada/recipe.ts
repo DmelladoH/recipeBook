@@ -7,10 +7,14 @@ export const cuscusConCarnePicada: Recipe = {
   ingredients: [
     {
       title: "Cuscus",
-      ingredients: ["1 taza cuscus", "1 taza caldo de ave", "Comino"],
+      ingredients: [
+        "1 taza cuscus",
+        "1 taza caldo de ave",
+        "una cucharada de comino",
+      ],
     },
     {
-      title: "Carne",
+      title: "Carne Picada",
       ingredients: [
         "400g de carne picada",
         "250g de tomate triturado",
