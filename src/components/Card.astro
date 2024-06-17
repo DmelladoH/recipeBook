@@ -9,10 +9,10 @@ interface props {
 
 const {img, name, cookingTime, href} = Astro.props
 ---
-<article class="hover:scale-105 transition-all duration-500 featured max-w-80">
+<article class="hover:scale-105 transition-all duration-500 featured md:max-w-80">
     <a href={href}>
         <header>
-            <img src={img} alt={name} class="rounded-lg h-[163px]" />
+            <img src={img} alt={name} class="rounded-lg w-full h-[163px]" />
         </header>
         <div class="p-2">
             <h4 class="text-xl">{name}</h4>
