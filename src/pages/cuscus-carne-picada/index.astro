@@ -1,11 +1,14 @@
 ---
 import Recipe from '../../components/Recipe.astro';
+import RecipeLayout from '../../layout/recipeLayout.astro';
 import Layout from '../Layout.astro';
 import { cuscusConCarnePicada } from './recipe';
 ---
 
 <Layout title="Cuscus carne picada">
-	<main class="flex justify-center">
-        <Recipe {...cuscusConCarnePicada} />
-	</main>
+	<RecipeLayout>
+		<main class="flex justify-center">
+			<Recipe {...cuscusConCarnePicada} />
+		</main>
+	</RecipeLayout>
 </Layout>

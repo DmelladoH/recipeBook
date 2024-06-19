@@ -1,17 +1,14 @@
 ---
 import Recipe from '../../components/Recipe.astro';
+import RecipeLayout from '../../layout/recipeLayout.astro';
 import Layout from '../Layout.astro';
 import { parmesanRisotto } from './recipe';
 ---
 
 <Layout title="Parmesan risotto">
-	<!-- <header class="p-4 fixed z-50 flex w-screen text-x2">
-		<a href="/" class="flex gap-2 hover:text-gray-700">
-			<img src="/back.svg" height="24px" width="24px"/>
-			back to menu
-		</a>
-	</header> -->
-	<main class="flex justify-center">
-        <Recipe {...parmesanRisotto} />
-	</main>
+	<RecipeLayout>
+		<main class="flex justify-center">
+			<Recipe {...parmesanRisotto} />
+		</main>
+	</RecipeLayout>
 </Layout>
