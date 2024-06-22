@@ -1,5 +1,7 @@
 ---
+import Image from 'astro/components/Image.astro';
 import type { IngredientGroup, stepsGroup } from '../type'
+import Clock from '../icons/clock.astro';
 
 interface Props {
     title: string,
@@ -18,7 +20,7 @@ const {title, description,ingredients, steps, cookingTime, picture, videoId} = A
 <div class=" md:w-[640px] md:mt-10 mb-20">
     <header>
         <div class="flex justify-center">
-            <img src={picture} alt={title} width="100%" height={300} class="md:rounded-lg"/>
+            <img src={picture} alt={title} width="100%" height={300} class="md:rounded-lg" transition:name="dish-photo" />
         </div>
         <div class="grid gap-4 p-6">
             <h2 class="text-center text-balance text-5xl text-[#3b1a18]">{title}</h2>
@@ -26,7 +28,7 @@ const {title, description,ingredients, steps, cookingTime, picture, videoId} = A
         </div>
         <div class="flex px-6">
             <div class="flex gap-1 items-end">
-                <img src="/clock.svg" height="20" width="20" alt="tiempo de preparación"/>
+                <Clock />
                 <span>{cookingTime} min</span>
             </div>
         </div>
