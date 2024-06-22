@@ -1,6 +1,6 @@
 export interface Recipe {
   title: string;
-  description: string;
+  description?: string;
   cookingTime: number;
   ingredients: IngredientGroup[];
   steps: stepsGroup[];

@@ -1,0 +1,14 @@
+---
+import Recipe from '../../components/Recipe.astro';
+import RecipeLayout from '../../layout/recipeLayout.astro';
+import Layout from '../Layout.astro';
+import { quesadillaRecipe } from './recipe';
+---
+
+<Layout title="Parmesan risotto">
+	<RecipeLayout>
+		<main class="flex justify-center">
+			<Recipe {...quesadillaRecipe} />
+		</main>
+	</RecipeLayout>
+</Layout>
