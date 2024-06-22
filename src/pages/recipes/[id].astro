@@ -1,0 +1,19 @@
+---
+import Recipe from "../../components/Recipe.astro";
+import RecipeLayout from "../../layout/recipeLayout.astro";
+import { recipes } from "../../lib/recipes";
+import Layout from "../Layout.astro";
+
+const {id } = Astro.params
+
+const recipe = recipes.find(recipe => recipe.id === id)
+
+---
+
+<Layout title="Cuscus carne picada">
+	<RecipeLayout>
+		<main class="flex justify-center">
+		    {recipe ? <Recipe {...recipe} /> : <p>404: not found</p>}
+		</main>
+	</RecipeLayout>
+</Layout>

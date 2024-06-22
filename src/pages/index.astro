@@ -2,6 +2,7 @@
 import Card from '../components/Card.astro';
 import Layout from './Layout.astro';
 import "../../global.css"
+import { recipes } from '../lib/recipes';
 ---
 
 <Layout title="Mis Recetas">
@@ -12,9 +13,17 @@ import "../../global.css"
 			</h1>  
 		</header>
 		<section class="mt-10 md:mx-10 gallery p-5" >
-			<Card img="/parmesan-risotto.jpg" name="Parmesan risotto" href="/parmesan-risotto" cookingTime="30"/>
-			<Card img="/cuscus-carne-picada.jpg" name="Cuscus con carne picada" href="/cuscus-carne-picada" cookingTime="30"/>
-			<Card img="/quesadilla-pollo.jpg" name="Quesadilla de pollo" href="/quesadillas-pollo" cookingTime="60"/>
+			{
+				recipes.map((recipe) => (
+					<Card 
+						key={recipe.id} 
+						img={recipe.picture} 
+						name={recipe.title} 
+						href={`recipes/${recipe.id}`}
+						cookingTime="30"
+					/>
+				))
+			}
 		</section>
 	</main>
 </Layout>

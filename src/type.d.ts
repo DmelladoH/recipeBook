@@ -17,3 +17,7 @@ export interface stepsGroup {
   title?: string;
   steps: string[];
 }
+
+export interface RecipeWithId extends Recipe {
+  id: string;
+}
