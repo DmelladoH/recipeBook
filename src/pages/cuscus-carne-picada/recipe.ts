@@ -2,7 +2,6 @@ import type { Recipe } from "../../type";
 
 export const cuscusConCarnePicada: Recipe = {
   title: "Cuscus de carne picada",
-  description: "",
   cookingTime: 30,
   ingredients: [
     {
