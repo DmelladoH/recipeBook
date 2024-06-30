@@ -195,4 +195,97 @@ export const recipes: RecipeWithId[] = [
     videoId: "qoeCvcE-gKY",
     picture: "/quesadilla-pollo.jpg",
   },
+  {
+    id: "albondigas-con-curry",
+    title: "Albóndigas con curry",
+    cookingTime: 60,
+    ingredients: [
+      {
+        title: "Arroz",
+        ingredients: [
+          "200g de arroz basmati",
+          "300ml de agua",
+          "estrella de anís",
+        ],
+      },
+      {
+        title: "Salsa curry",
+        ingredients: [
+          "20g de jenjibre",
+          "3 dientes de ajo",
+          "2 rebollas rojas",
+          "4 tomates",
+          "1 rama citronela",
+          "200ml caldo de pollo",
+          "400ml leche de coco",
+        ],
+      },
+      {
+        title: "Albóndigas",
+        ingredients: [
+          "600g de carne picada",
+          "sal y pimienta",
+          "yogur griepo",
+          "Albahaca fresca",
+          "Anacardos picados",
+          "cilantro",
+        ],
+      },
+    ],
+    steps: [
+      {
+        title: "Arroz",
+        steps: [
+          "Colocamos los 200g de arroz a un cuenco y lo lavamos con agua fría para retirar el almidón hasta que el agua salga clara",
+          "Vertimos una parte y media del agua en el cuenco (300ml de agua)",
+          "Dejamos hidratar el arroz durante 30 minutos",
+          "Una vez hidratado, vertimos el arroz con el agua en una cazuela y añadimos sal y anís estrellado",
+          "Dejamos que el agua hierva y bajamos el fuego al mínimo, tapamos la cazuela y dejamos cocinar durante 15 minutos",
+          "Dejar reposando 10 minutos con la tapa puesta",
+        ],
+      },
+      {
+        title: "Salsa curry",
+        steps: [
+          "Cortamos los 20g de jenjibre ya pelado en trozos pequeños",
+          "Picamos 3 dientes de ajo",
+          "Cortamos 2 cebollas moradas en julianas",
+          "Cortamos 4 tomates en cuartos",
+          "Aplastamos y troceamos la rama de citronela",
+          "Para el sofrito añadimos mantequilla clarificada (ghee) a una cazuela y la calentamos",
+          "Tostamos el jenjibre y el ajo",
+          "Una vez dorados añadimos las cebollas y la salamos",
+          "Añadimos la pasta de curry y la integramos bien",
+          "Añadimos los tomates y la citronela",
+          "Añadimos el caldo de pollo",
+          "Una vez el caldo este hirviendo añadimos la leche de coco",
+          "Dejamos reducir hasta que tenga una textura cremosa",
+          "trituramos la mezcla, hasta que no queden trozos y quede lisa",
+        ],
+      },
+      {
+        title: "Albóndigas",
+        steps: [
+          "En un bol añadimos la carne picada y salpimentamos al gusto",
+          "Mezclamos y masajeamos la mezcla para que se integren bien los sabores",
+          "Trabajamos la carne para bolearla hasta que quede fina y hacer albóndigas pequeñas",
+          "En una sartén caliente añadimos aceite de oliva y marcamos las albóndigas, movemos la sartén para que se doren por todos los lados",
+          "Una vez doradas las añadimos a una cazuela con la salsa de curry y cocinamos hasta que la salsa haya reducido",
+        ],
+      },
+      {
+        title: "Emplatado",
+        steps: [
+          "Colocamos una base de arroz",
+          "Añadimos las albóndigas con la salsa por encima",
+          "Añadimos yogur griego",
+          "Añadimos albahaca fresca",
+          "Añadimos anacardos picados",
+          "Añadimos cilantro",
+        ],
+      },
+    ],
+    videoId: "8A78CHESj2k",
+    picture: "/albondigas-con-curry.jpg",
+  },
 ];
