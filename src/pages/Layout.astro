@@ -18,6 +18,11 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style>
+			.transition-blur {
+				transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+			}
+		</style>
 		<ViewTransitions fallback='none'/>
 	</head>
 	<body class="bg-[#f1eddd] text-[#230f0f]">
@@ -25,9 +30,7 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-
 	body {
 		font-family: 'Raleway Variable', sans-serif;
 	}
-	
 </style>
