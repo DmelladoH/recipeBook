@@ -49,6 +49,7 @@ export const recipes: RecipeWithId[] = [
           "1 taza cuscus",
           "1 taza caldo de ave",
           "una cucharada de comino",
+          "sal al gusto",
         ],
       },
       {
@@ -56,7 +57,7 @@ export const recipes: RecipeWithId[] = [
         ingredients: [
           "400g de carne picada",
           "250g de tomate triturado",
-          "Una cebolla roja",
+          "Una cebolla morada",
         ],
       },
       {
@@ -68,18 +69,17 @@ export const recipes: RecipeWithId[] = [
           "Pepinillos encurtidos",
           "Aceite de oliva",
           "Limón",
-          "Perejil picado",
         ],
       },
       {
-        ingredients: ["Sal", "Queso fetta"],
+        ingredients: ["Queso fetta", "Perejil fresco picado"],
       },
     ],
     steps: [
       {
         title: "Carne picada",
         steps: [
-          "Cortamos una cebolla roja en dados y la rehogamos con aceita, le añadimos sal.",
+          "Cortamos una cebolla morada en dados y la rehogamos con aceita, le añadimos sal.",
           "Añadimos la carne picada y la cocinamos, esperando a que quede dorada",
           "Añadimos el tomate triturado y lo cocinamos con la carne",
           "salpimentamos al gusto",
@@ -89,12 +89,17 @@ export const recipes: RecipeWithId[] = [
         title: "Cuscus",
         steps: [
           "Para el cuscus ponemos a hervir la taza de caldo de pollo, le añadimos una cucharada de comino y sal",
-          "Una vez el caldo es hirviendo lo vertemos a un bol, le echamos el cuscus y lo tapamos durante 5 minutos",
+          "Una vez el caldo es hirviendo, echamos el cuscus en un bol y le vertimos el caldo hirviendo. Lo tapamos durante 5 minutos",
+        ],
+      },
+      {
+        title: "Salsa",
+        steps: [
           "En un bol añadimos el yogur griego natural",
           "Añadimos una cucharada de ajo picado",
           "Añadimos una cucharada de eneldo",
           "Añadimos una cucharada de comino",
-          "Añadimos una cucharada de pepinillos encurtidos",
+          "Añadimos una cucharada de pepinillos encurtidos en trozos pequeños",
           "Añadimos un chorro de aceite de oliva",
           "Añadimos sal",
           "Por último un chorro de limón y removemos bien.",
@@ -103,12 +108,11 @@ export const recipes: RecipeWithId[] = [
       {
         title: "Emplatado",
         steps: [
-          "Para emplatar: ",
           "Una capa de cuscus",
           "La carne picada por encima",
           "Añadimos la salsa de yogur",
           "Trozos de queso feta",
-          "Perejil picado",
+          "Perejil fresco picado",
         ],
       },
     ],
