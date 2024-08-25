@@ -23,7 +23,7 @@ const {id, title, description,ingredients, steps, cookingTime, picture, videoId}
             <img src={picture} alt={title} width="100%" height={300} class="md:rounded-lg" transition:name={`recipe ${id} image`}/>
         </div>
         <div class="grid gap-4 p-6">
-            <h2 class="text-center text-balance text-5xl text-[#3b1a18]" transition:name={`recipe ${id} title`}>
+            <h2 class="text-center text-balance text-5xl text-primary" transition:name={`recipe ${id} title`}>
                 {title}
             </h2>
             <p>{description}</p>
@@ -35,7 +35,7 @@ const {id, title, description,ingredients, steps, cookingTime, picture, videoId}
             </div>
         </div>
     </header>
-    <section class="p-5 mt-8 bg-[#eee29d] drop-shadow-[0_8px_8px_rgba(0,0,0,0.09)] rounded-lg  h-min m-4">
+    <section class="p-5 mt-8 bg-bgSecondary drop-shadow-[0_8px_8px_rgba(0,0,0,0.09)] rounded-lg  h-min m-4">
         <h3 class="text-xl topacity-85 bold uppercase">ingredientes</h3>
         {
             ingredients.map((elem) => (
