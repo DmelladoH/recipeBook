@@ -8,6 +8,7 @@ export default {
 			bgSecondary: "#eee29d",
 			black: "#230f0f",
 			primary: "#3b1a18",
+			secondary: "#B05138"
 		}
 	},
 	plugins: [],
