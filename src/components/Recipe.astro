@@ -71,9 +71,14 @@ const {id, title, description,ingredients, steps, cookingTime, picture, videoId}
             ))
         }
     </section> 
-    <section class="mt-10">
-        <lite-youtube videoid={videoId} vudeoTitle={title} class="shadow-2xl shadow-white/10"></lite-youtube>    
-    </section>
+    {
+        videoId 
+            ?(
+                <section class='mt-10'>
+                    <lite-youtube videoid={videoId} vudeoTitle={title} class="shadow-2xl shadow-white/10"></lite-youtube>    
+                </section>
+            ) : null
+    }
 </>
 
 <script>
