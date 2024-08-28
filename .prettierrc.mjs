@@ -1,7 +1,7 @@
 /** @type {import("prettier").Config} */
 
 const config = {
-	plugins: ["prettier-plugin-astro"],
+	plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
 	useTabs: true,
 	tabWidth: 2,
 	semi: false,
