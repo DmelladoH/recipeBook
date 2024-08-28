@@ -1,28 +1,28 @@
 ---
-import Card from '../components/Card.astro';
-import Layout from './Layout.astro';
+import Card from "../components/Card.astro"
+import Layout from "./Layout.astro"
 import "../../global.css"
-import { recipes } from '../lib/recipes';
-import Header from '../components/Header.astro';
+import { recipes } from "../lib/recipes"
+import Header from "../components/Header.astro"
 ---
 
 <Layout title="Recipe Book">
 	<main>
-		<Header />	
-		<section class="mt-10 md:mx-10 p-5" >
+		<Header />
+		<section class="mt-10 p-5 md:mx-10">
 			<h2 class="text-lg font-bold">Recetas</h2>
 			<div class="gallery mt-3">
-			{
-				recipes.map((recipe) => (
-					<Card 
-						key={recipe.id} 
-						img={recipe.picture} 
-						name={recipe.title} 
-						href={`recipes/${recipe.id}`}
-						cookingTime="30"
-					/>
-				))
-			}
+				{
+					recipes.map((recipe) => (
+						<Card
+							key={recipe.id}
+							img={recipe.picture}
+							name={recipe.title}
+							href={`recipes/${recipe.id}`}
+							cookingTime="30"
+						/>
+					))
+				}
 			</div>
 		</section>
 	</main>

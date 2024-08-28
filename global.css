@@ -1,16 +1,16 @@
 .gallery {
-  display: grid;
-  gap: 1rem;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	display: grid;
+	gap: 1rem;
+	grid-auto-rows: auto;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 }
 
 .featured {
-  grid-column: span 1;
+	grid-column: span 1;
 }
 
 @media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
+	.gallery {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
 }

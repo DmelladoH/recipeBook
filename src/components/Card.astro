@@ -2,28 +2,38 @@
 import "../../global.css"
 import Clock from "../icons/clock.astro"
 interface props {
-    key: string,
-    img: string,
-    name: string,
-    cookingTime: number,
-    href: string,
+	key: string
+	img: string
+	name: string
+	cookingTime: number
+	href: string
 }
 
-const {key, img, name, cookingTime, href} = Astro.props
+const { key, img, name, cookingTime, href } = Astro.props
 ---
-<article class="hover:scale-105 transition-all duration-500 featured md:max-w-80">
-    <a href={href}>
-        <header>
-            <img src={img} alt={name} class="rounded-lg w-full" transition:name={`recipe ${key} image`} />
-        </header>
-        <div class="p-2">
-            <h4 class="text-xl" transition:name={`recipe ${key} title`}>{name}</h4>
-            <div class="flex">
-                <div class="flex gap-2">
-                    <Clock />
-                    <span>{cookingTime}'</span>
-                </div>
-            </div>
-        </div>
-    </a>
+
+<article
+	class="featured transition-all duration-500 hover:scale-105 md:max-w-80"
+>
+	<a href={href}>
+		<header>
+			<img
+				src={img}
+				alt={name}
+				class="w-full rounded-lg"
+				transition:name={`recipe ${key} image`}
+			/>
+		</header>
+		<div class="p-2">
+			<h4 class="text-xl" transition:name={`recipe ${key} title`}>
+				{name}
+			</h4>
+			<div class="flex">
+				<div class="flex gap-2">
+					<Clock />
+					<span>{cookingTime}'</span>
+				</div>
+			</div>
+		</div>
+	</a>
 </article>

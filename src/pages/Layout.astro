@@ -1,12 +1,12 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/raleway';
-import { ViewTransitions } from 'astro:transitions';
+import "@fontsource-variable/raleway"
+import { ViewTransitions } from "astro:transitions"
 interface Props {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -20,10 +20,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<style>
 			.transition-blur {
-				transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+				transition:
+					backdrop-filter 0.3s ease,
+					-webkit-backdrop-filter 0.3s ease;
 			}
 		</style>
-		<ViewTransitions fallback='none'/>
+		<ViewTransitions fallback="none" />
 	</head>
 	<body class="bg-bgPrimary text-black">
 		<slot />
@@ -31,6 +33,6 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	body {
-		font-family: 'Raleway Variable', sans-serif;
+		font-family: "Raleway Variable", sans-serif;
 	}
 </style>
