@@ -1,12 +1,19 @@
 /** @type {import("prettier").Config} */
-export default {
-  plugins: ["prettier-plugin-astro"],
-  overrides: [
-    {
-      files: "*.astro",
-      options: {
-        parser: "astro",
-      },
-    },
-  ],
-};
+
+const config = {
+	plugins: ["prettier-plugin-astro"],
+	useTabs: true,
+	tabWidth: 2,
+	semi: false,
+	singleQuote: false,
+	overrides: [
+		{
+			files: "*.astro",
+			options: {
+				parser: "astro",
+			},
+		},
+	],
+}
+
+export default config
