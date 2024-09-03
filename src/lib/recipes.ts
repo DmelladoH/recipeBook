@@ -79,7 +79,7 @@ export const recipes: RecipeWithId[] = [
 			{
 				title: "Carne picada",
 				steps: [
-					"Cortamos una cebolla morada en dados y la rehogamos con aceita, le añadimos sal.",
+					"Cortamos una cebolla morada en dados y la rehogamos con aceite, le añadimos sal.",
 					"Añadimos la carne picada y la cocinamos, esperando a que quede dorada.",
 					"Añadimos el tomate triturado y lo cocinamos con la carne.",
 					"salpimentamos al gusto.",
