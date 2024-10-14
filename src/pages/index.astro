@@ -19,7 +19,7 @@ import Header from "../components/Header.astro"
 							img={recipe.picture}
 							name={recipe.title}
 							href={`recipes/${recipe.id}`}
-							cookingTime="30"
+							cookingTime={recipe.cookingTime}
 						/>
 					))
 				}
