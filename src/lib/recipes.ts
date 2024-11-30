@@ -496,6 +496,6 @@ export const recipes: RecipeWithId[] = [
 				],
 			},
 		],
-		picture: "",
+		picture: "/lentejas.jpg",
 	},
 ]
