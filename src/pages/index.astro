@@ -2,8 +2,12 @@
 import Card from "../components/Card.astro"
 import Layout from "./Layout.astro"
 import "../../global.css"
-import { recipes } from "../lib/recipes"
 import Header from "../components/Header.astro"
+
+const recipes = Object.values(
+	import.meta.glob("./recipes/*.md", { eager: true }),
+)
+console.log(recipes)
 ---
 
 <Layout title="Recipe Book">
@@ -13,13 +17,13 @@ import Header from "../components/Header.astro"
 			<h2 class="text-lg font-bold">Recetas</h2>
 			<div class="gallery mt-3">
 				{
-					recipes.map((recipe) => (
+					recipes.map((recipe: any) => (
 						<Card
-							key={recipe.id}
-							img={recipe.picture}
-							name={recipe.title}
-							href={`recipes/${recipe.id}`}
-							cookingTime={recipe.cookingTime}
+							key={recipe.frontmatter.id}
+							img={recipe.frontmatter.picture}
+							name={recipe.frontmatter.title}
+							href={`recipes/${recipe.frontmatter.id}`}
+							cookingTime={recipe.frontmatter.cookingTime}
 						/>
 					))
 				}
