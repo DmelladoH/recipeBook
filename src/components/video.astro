@@ -1,0 +1,17 @@
+---
+interface Props {
+	videoId: string
+	title: string
+}
+
+const { videoId, title } = Astro.props
+---
+
+<lite-youtube
+	videoid={videoId}
+	vudeoTitle={title}
+	class="shadow-white/10 shadow-2xl"></lite-youtube>
+
+<script>
+	import "@justinribeiro/lite-youtube"
+</script>
