@@ -28,7 +28,7 @@ picture: "/guiso-de-ternera.jpg"
 2. Cortar los champiñones en cuartos.
 3. Cortar el tomate en cuartos.
 4. Cortar las patatas en tamaño de bocado. (Reservar en agua para evitar que se oxiden.)
-5. Limar el morcillo, sin retirar todos los tejidos grasos ya que aportan sabor y textura.
+5. Limpiar el morcillo, sin retirar todos los tejidos grasos ya que aportan sabor y textura.
 6. Cortar el morcillo en trozos de bocado.
 
 ### Marcar la carne
