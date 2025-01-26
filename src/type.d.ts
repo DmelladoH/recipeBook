@@ -10,14 +10,23 @@ export interface Recipe {
 
 export interface IngredientGroup {
 	title?: string
-	ingredients: string[]
+	ingredients: any[]
 }
 
-export interface stepsGroup {
+export interface StepsGroup {
 	title?: string
 	steps: string[]
 }
 
+export interface Item {
+	recipes: string[]
+	ingredient: string
+	quantity: number
+}
 export interface RecipeWithId extends Recipe {
 	id: string
 }
+
+export type ItemTuple = [string, number | null | undefined]
+
+export type Unit = "g" | "ml" | "pcs"
