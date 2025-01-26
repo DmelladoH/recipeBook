@@ -1,0 +1,118 @@
+---
+import Cart from "../icons/cart.astro"
+---
+
+<button
+	id="toggle-menu"
+	aria-control="cart-menu"
+	aria-expanded="false"
+	class="absolute right-8 top-8 z-50 rounded-full bg-bgPrimary p-2"
+	><span class="sr-only">Open Cart</span>
+	<Cart />
+</button>
+<aside id="cart-menu" data-visible="false" class="fixed bg-bgSecondary">
+	<div class="mt-16">
+		<header>
+			<h3>Cart 🛒</h3>
+			<button id="clean-button">Remove</button>
+		</header>
+		<section class="cart"></section>
+	</div>
+</aside>
+
+<style>
+	#cart-menu {
+		inset: 0 0 0 0%;
+	}
+	#cart-menu[data-visible="false"] {
+		transform: translateX(100%);
+	}
+	#cart-menu[data-visible="true"] {
+		transform: translateX(0%);
+	}
+
+	@media (max-width: 400px) {
+		#cart-menu {
+			inset: 0 0 0 0%;
+		}
+	}
+
+	@media (min-width: 400px) and (max-width: 800px) {
+		#cart-menu {
+			inset: 0 0 0 30%;
+		}
+	}
+
+	@media (min-width: 800px) {
+		#cart-menu {
+			inset: 0 0 0 80%;
+		}
+	}
+</style>
+
+<script>
+	import { getCartItems, cleanAll } from "../store.ts"
+
+	window.addEventListener("cartchange", () => {
+		console.log("cart has change")
+		loadIngredientsToCart()
+	})
+
+	function removeAllFromCart() {
+		console.log("clean")
+		cleanAll()
+
+		const section = document.querySelector(".cart")
+		if (section) {
+			section.innerHTML = ""
+		}
+	}
+
+	function loadIngredientsToCart() {
+		const ingredient = getCartItems()
+
+		const section = document.querySelector(".cart")
+		if (section) {
+			section.innerHTML = ""
+		}
+
+		const ul = document.createElement("ul")
+
+		ingredient.forEach((ingredient) => {
+			const li = document.createElement("li")
+			li.innerHTML = `<input type='checkbox'> ${ingredient.ingredient} x ${ingredient.quantity}</span>`
+			ul?.appendChild(li)
+		})
+		section?.appendChild(ul)
+	}
+
+	function initToggle() {
+		loadIngredientsToCart()
+
+		const aside = document.querySelector("#cart-menu")
+		const toggleMenu = document.querySelector("#toggle-menu")
+
+		toggleMenu?.addEventListener("click", () => {
+			const isVisible = aside?.getAttribute("data-visible") === "true"
+			console.log("click")
+			if (isVisible) {
+				aside?.setAttribute("data-visible", "false")
+				toggleMenu?.setAttribute("aria-expanded", "false")
+			} else {
+				aside?.setAttribute("data-visible", "true")
+				toggleMenu?.setAttribute("aria-expanded", "true")
+			}
+		})
+	}
+
+	document.addEventListener("astro:page-load", () => {
+		initToggle()
+
+		const cleanButton = document.getElementById("clean-button")
+		cleanButton?.addEventListener("click", () => {
+			removeAllFromCart()
+		})
+	})
+</script>
+
+<script></script>

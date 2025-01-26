@@ -6,7 +6,8 @@ import Clock from "../icons/clock.astro"
 import Layout from "../pages/Layout.astro"
 
 const { frontmatter } = Astro.props
-const { id, picture, cookingTime, title, description } = frontmatter
+const { id, picture, cookingTime, title, description, ingredients, videoId } =
+	frontmatter
 ---
 
 <Layout title={title}>
@@ -40,14 +41,14 @@ const { id, picture, cookingTime, title, description } = frontmatter
 					</div>
 				</div>
 			</section>
-			<IngredientsList ingredients={frontmatter.ingredients} />
+			<IngredientsList ingredients={ingredients} recipeId={id} />
 			<section class="markdown-content h-min p-5">
 				<slot />
 			</section>
 			{
-				frontmatter.videoId && (
+				videoId && (
 					<section class="mt-10">
-						<Video videoId={frontmatter.videoId} title={frontmatter.title} />
+						<Video videoId={videoId} title={title} />
 					</section>
 				)
 			}
