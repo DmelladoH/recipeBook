@@ -6,26 +6,26 @@ cookingTime: 60
 ingredients:
   - title: "Arroz"
     ingredients:
-      - "200g de arroz basmati"
-      - "300ml de agua"
-      - "estrella de anís"
+      - ["Arroz basmati", 200, "g"]
+      - ["Agua", 300, "ml"]
+      - ["estrella de anís", 1, "pcs"]
   - title: "Salsa curry"
     ingredients:
-      - "20g de jenjibre"
-      - "3 dientes de ajo"
-      - "2 cebollas rojas"
-      - "4 tomates"
-      - "1 rama citronela"
-      - "200ml caldo de pollo"
-      - "400ml leche de coco"
+      - ["Jenjibre", 20, "g"]
+      - ["Dientes de ajo", 3, "pcs"]
+      - ["Cebollas rojas", 2, "pcs"]
+      - ["Tomates", 4, "pcs"]
+      - ["Rama citronela", 1, "pcs"]
+      - ["Caldo de pollo", 200, "ml"]
+      - ["Leche de cco", 400, "ml"]
   - title: "Albóndigas"
     ingredients:
-      - "600g de carne picada"
-      - "sal y pimienta"
-      - "yogur griego"
-      - "Albahaca fresca"
-      - "Anacardos picados"
-      - "cilantro"
+      - ["Carne picada", 600, "g"]
+      - ["Cal y pimienta"]
+      - ["Yogur griego", 1, "pcs"]
+      - ["Albahaca fresca"]
+      - ["Anacardos picados"]
+      - ["Cilantro"]
 videoId: "8A78CHESj2k"
 picture: "/albondigas-con-curry.jpg"
 ---

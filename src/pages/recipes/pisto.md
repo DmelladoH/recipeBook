@@ -6,19 +6,19 @@ cookingTime: 60
 ingredients:
   - title: "Sofrito"
     ingredients:
-      - "media cebolla"
-      - "2 tomates"
-      - "tomate triturado (opcional)"
-      - "1 cucharada de pimentón"
+      - ["Cebolla", 0.5, "pcs"]
+      - ["Tomate", 2, "pcs"]
+      - ["Tomate triturado", 200, "g"]
+      - ["Pimentón"]
   - title: "Pisto"
     ingredients:
-      - "media cebolla"
-      - "2 dientes de ajo"
-      - "1 pimiento verde"
-      - "1 pimiento rojo"
-      - "1 berenjena"
-      - "2 patatas"
-      - "1 huevo"
+      - ["Cebolla", 0.5, "pcs"]
+      - ["Dientes de ajo", 2, "pcs"]
+      - ["Pimiento verde", 1, "pcs"]
+      - ["Pimiento rojo", 1, "pcs"]
+      - ["Berenjena", 1, "pcs"]
+      - ["Patatas", 2, "pcs"]
+      - ["Huevo", 1, "pcs"]
 picture: "/pisto.jpg"
 ---
 

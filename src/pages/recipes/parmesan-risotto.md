@@ -6,12 +6,13 @@ description: "El risotto de arroz con mantequilla y queso Parmigiano Reggiano es
 cookingTime: 30
 ingredients:
   - ingredients:
-      - "320g arroz"
-      - "agua"
-      - "80g de mantequilla fría"
-      - "150g de parmigiano reggiano"
-      - "sal al gusto"
-      - "pimienta negra recién molida"
+      - ["Arroz", 320, "g"]
+      - ["Cebolla", 1, "pcs"]
+      - ["Agua"]
+      - ["Mantequilla", 80, "g"]
+      - ["Parmigiano reggiano", 150, "g"]
+      - ["Sal"]
+      - ["Pimienta negra"]
 picture: "/parmesan-risotto.jpg"
 videoId: "ANZTOPW_j7k"
 ---

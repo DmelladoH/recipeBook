@@ -6,25 +6,25 @@ cookingTime: 30
 ingredients:
   - title: "Cuscus"
     ingredients:
-      - "1 taza cuscus"
-      - "1 taza caldo de ave"
-      - "una cucharada de comino"
-      - "sal al gusto"
-      - "Queso fetta"
-      - "Perejil fresco picado"
+      - ["Cuscús", 1, "pcs"]
+      - ["Caldo de ave", 1, "L"]
+      - ["Comino"]
+      - ["Sal"]
+      - ["Queso feta", 100, "g"]
+      - ["Perejil fresco", 1, "pcs"]
   - title: "Carne Picada"
     ingredients:
-      - "400g de carne picada"
-      - "250g de tomate triturado"
-      - "Una cebolla morada"
+      - ["Carne picada", 400, "g"]
+      - ["Tomate triturado", 250, "g"]
+      - ["Cebolla morada", 1, "pcs"]
   - title: "Salsa"
     ingredients:
-      - "Yogur griego natural"
-      - "Ajo picado"
-      - "Eneldo"
-      - "Pepinillos encurtidos"
-      - "Aceite de oliva"
-      - "Limón"
+      - ["Yogur griego natural", 200, "g"]
+      - ["Ajo picado", 1, "pcs"]
+      - ["Eneldo", 1, "pcs"]
+      - ["Pepinillos encurtidos", 2, "pcs"]
+      - ["Aceite de oliva", 2, "pcs"]
+      - ["Limón", 0.5, "pcs"]
 videoId: "IO4Z0anzIog"
 picture: "/cuscus-carne-picada.jpg"
 ---

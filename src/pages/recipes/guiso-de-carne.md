@@ -5,18 +5,18 @@ title: "Guiso de carne"
 cookingTime: 240
 ingredients:
   - ingredients:
-      - "1kg de morcillo de ternera"
-      - "2 patatas"
-      - "1 zanahoria"
-      - "Medio puerro"
-      - "1 cebolla blanca"
-      - "1 tomate"
-      - "Tomillo"
-      - "Caldo de carne"
-      - "250ml de vino tinto"
-      - "2 cucharadas de tomate concentrado"
-      - "4 champiñones"
-      - "pimentón"
+      - ["Morcillo de ternera", 1, "kg"]
+      - ["Patatas", 2, "pcs"]
+      - ["Zanahoria", 1, "pcs"]
+      - ["Puerro", 0.5, "pcs"]
+      - ["Cebolla blanca", 1, "pcs"]
+      - ["Tomate", 1, "pcs"]
+      - ["Tomillo"]
+      - ["Caldo de carne", 500, "ml"]
+      - ["Vino tinto", 250, "ml"]
+      - ["Tomate concentrado", 2, "tbsp"]
+      - ["Champiñones", 4, "pcs"]
+      - ["Pimentón"]
 picture: "/guiso-de-ternera.jpg"
 ---
 

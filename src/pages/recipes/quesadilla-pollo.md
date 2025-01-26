@@ -6,22 +6,22 @@ cookingTime: 60
 ingredients:
   - title: "Marinado"
     ingredients:
-      - "pimienta"
-      - "30ml de salsa de soja"
-      - "15ml de salsa inglesa"
-      - "una lima"
-      - "pimentón picante"
-      - "1 cucharilla de comino molido"
-      - "1 cucharilla de glutamato monosódico"
-      - "30ml de aceite de girasol"
-  - quesadilla:
+      - ["Pimienta"]
+      - ["Salsa de soja", 30, "ml"]
+      - ["Salsa inglesa", 15, "ml"]
+      - ["Lima", 1, "pcs"]
+      - ["Pimentón picante"]
+      - ["Comino molido", 1, "tsp"]
+      - ["Glutamato monosódico", 1, "tsp"]
+      - ["Aceite de girasol", 30, "ml"]
+  - title: "Quesadilla"
     ingredients:
-      - "200g Queso gruyere"
-      - "200g Queso cheddar"
-      - "100g Queso curado de oveja"
-      - "1 pechuga de pollo"
-      - "Tortillas de trigo"
-      - "Jalapeños encurtidos"
+      - ["Queso gruyere", 200, "g"]
+      - ["Queso cheddar", 200, "g"]
+      - ["Queso curado de oveja", 100, "g"]
+      - ["Pechuga de pollo", 1, "pcs"]
+      - ["Tortillas de trigo", 4, "pcs"]
+      - ["Jalapeños encurtidos"]
 videoId: "qoeCvcE-gKY"
 picture: "/quesadilla-pollo.jpg"
 ---

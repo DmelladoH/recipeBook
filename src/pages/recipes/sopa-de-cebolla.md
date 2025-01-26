@@ -6,15 +6,15 @@ description: A traditional French onion soup with caramelized onions and toasted
 cookingTime: 180
 ingredients:
   - ingredients:
-      - 1.5 kg de cebollas dulces
-      - 85 g de mantequilla
-      - Aceite de oliva virgen extra
-      - 300 ml de vino blanco
-      - 1 litro de caldo (de pollo, verduras o ternera, según preferencia)
-      - 200 ml de agua
-      - Ramillete de tomillo
-      - Baguette
-      - Queso gouda o gruyere (opcional)
+      - ["Cebollas dulces", 1500, "g"]
+      - ["Mantequilla", 85, "g"]
+      - ["Aceite de oliva"]
+      - ["Vino blanco", 300, "ml"]
+      - ["Caldo", 1000, "ml"]
+      - ["Agua", 200, "ml"]
+      - ["Tomillo"]
+      - ["Baguette", 1, "pcs"]
+      - ["Queso gruyere", 200, "g"]
 picture: /sopa-de-cebolla.jpg
 videoId: null
 ---

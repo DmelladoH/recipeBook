@@ -6,17 +6,17 @@ cookingTime: 120
 ingredients:
   - title: "Sofrito"
     ingredients:
-      - "Tomates (triturado o naturales)"
-      - "Cebolla"
-      - "Pimentón"
+      - ["Tomate triturado", 200, "g"]
+      - ["Cebolla", 1, "pcs"]
+      - ["Pimentón"]
   - title: "Lentejas"
     ingredients:
-      - "300g de lentejas"
-      - "50g de sobrasada"
-      - "1 cebolla"
-      - "1 zanahoria"
-      - "1 patata"
-      - "Caldo (de carne o ave, según preferencia)"
+      - ["Lentejas", 300, "g"]
+      - ["Sobrasada", 50, "g"]
+      - ["Cebolla", 1, "pcs"]
+      - ["Zanahoria", 1, "pcs"]
+      - ["Patata", 1, "pcs"]
+      - ["Caldo", 500, "ml"]
 picture: "/lentejas.jpg"
 ---
 

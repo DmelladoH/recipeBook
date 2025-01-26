@@ -5,20 +5,19 @@ title: "Crema de calabaza"
 cookingTime: 60
 ingredients:
   - ingredients:
-      - "1 calabaza"
-      - "1 puerro"
-      - "3 dientes de ajo"
-      - "30g de jengibre"
-      - "30ml de aceite o mantequilla"
-      - "1 cucharada de comino"
-      - "1 cucharada de curry"
-      - "1 cucharada de cúrcuma"
-      - "1 cucharada de pimentón"
-      - "300ml caldo de ave"
-      - "200ml de nata"
-      - "aceite de oliva"
-      - "cilantro"
-      - "Queso parmessano"
+      - ["Calabaza", 1, "pcs"]
+      - ["Puerro", 1, "pcs"]
+      - ["Dientes de ajo", 3]
+      - ["jengibre", 30, "g"]
+      - ["Mantequilla", 30, "ml"]
+      - ["Comino"]
+      - ["Curry"]
+      - ["Pimentón"]
+      - ["Caldo de ave", 300, "ml"]
+      - ["Nata", 200, "ml"]
+      - ["Aceite de oliva"]
+      - ["Cilantro"]
+      - ["Queso parmesano"]
 
 videoId:
 picture: "/crema-calabaza.jpg"

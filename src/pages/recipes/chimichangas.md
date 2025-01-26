@@ -6,31 +6,31 @@ cookingTime: 40
 ingredients:
   - title: "Relleno"
     ingredients:
-      - "Tortillas de maiz"
-      - "1 cebolla"
-      - "Manteca de cerdo"
-      - "Carne picada de ternera"
-      - "Jalapeños"
-      - "Concentrado de tomate"
-      - "Ketchup"
-      - "Ajo en polvo"
-      - "Comino en polvo"
-      - "Chile en polvo"
-      - "Caldo de pollo"
-      - "Salsa inglesa"
-      - "frijoles refritos"
-      - "Queso cheddar"
-      - "Crema agria o cream fraiche"
+      - ["Tortillas de maiz", 6, "pcs"]
+      - ["Cebolla", 1, "pcs"]
+      - ["Manteca de cerdo"]
+      - ["Carne picada de ternera"]
+      - ["Jalapeños"]
+      - ["Concentrado de tomate"]
+      - ["Ketchup"]
+      - ["Ajo en polvo"]
+      - ["Comino en polvo"]
+      - ["Chile en polvo"]
+      - ["Caldo de pollo"]
+      - ["Salsa inglesa"]
+      - ["frijoles refritos"]
+      - ["Queso cheddar"]
+      - ["Crema agria o cream fraiche"]
   - title: "Guacamole"
     ingredients:
-      - "1 aguacates"
-      - "1 tomate"
-      - "1/2 cebolla"
-      - "1/2 lima"
-      - "cilantro"
-      - "sal"
-      - "pimienta"
-      - "chile"
+      - ["tomate", 1, "pcs"]
+      - ["aguacates", 1, "pcs"]
+      - ["cebolla", 0.5, "pcs"]
+      - ["lima", 0.5, "pcs"]
+      - ["cilantro"]
+      - ["sal"]
+      - ["pimienta"]
+      - ["chile"]
 videoId: "NoORdx7psw0"
 picture: "/chimichangas.jpg"
 ---
