@@ -24,67 +24,79 @@ const ingredientsList = ingredients
 >
 
 <script>
-    import { addToListCart, getCartItems, remove } from "../store"
-    import type { Item } from "../type"
+	import { addToListCart, getCartItems, remove } from "../store"
+	import type { Item } from "../type"
 
-    function updateButtonState(button: HTMLButtonElement, cart: Item[], ingredients: any[], id: string) {
-        const alreadyInCart = isSomeIngredientsInCart(cart, ingredients, id)
-        button.textContent = alreadyInCart ? "Remove from cart" : "Add to Cart"
-    }
+	function updateButtonState(
+		button: HTMLButtonElement,
+		cart: Item[],
+		ingredients: any[],
+		id: string,
+	) {
+		const alreadyInCart = isSomeIngredientsInCart(cart, ingredients, id)
+		button.textContent = alreadyInCart ? "Remove from cart" : "Add to Cart"
+	}
 
-    const isSomeIngredientsInCart = (
-        cart: Item[],
-        ingredientsToAdd: any,
-        recipeId: string,
-    ) => {
-        return cart.some((ingredient) =>
-            ingredientsToAdd.every(
-                (item: { ingredient: string; quantity: number }) =>
-                    item.ingredient === ingredient.ingredient &&
-                    ingredient.recipes.includes(recipeId),
-            ),
-        )
-    }
+	const isSomeIngredientsInCart = (
+		cart: Item[],
+		ingredientsToAdd: { ingredient: string; quantity: number }[],
+		recipeId: string,
+	): boolean => {
+		return cart.some((cartItem) =>
+			ingredientsToAdd.some(
+				(ingredientToAdd) =>
+					ingredientToAdd.ingredient === cartItem.ingredient &&
+					cartItem.recipes.includes(recipeId),
+			),
+		)
+	}
 
-    function handleCartChange() {
-        const button = document.querySelector("#add-to-cart-button") as HTMLButtonElement
-        if (!button?.dataset.data) return
+	function handleCartChange() {
+		const button = document.querySelector(
+			"#add-to-cart-button",
+		) as HTMLButtonElement
+		if (!button?.dataset.data) return
 
-        const cart = getCartItems()
-        const { ingredients, id } = JSON.parse(button.dataset.data)
-        updateButtonState(button, cart, ingredients, id)
-    }
+		const cart = getCartItems()
+		const { ingredients, id } = JSON.parse(button.dataset.data)
+		updateButtonState(button, cart, ingredients, id)
+	}
 
-    function onClick(event: MouseEvent) {
-        const target = event.target as HTMLButtonElement
-        if (!target?.dataset.data) return
+	function onClick(event: MouseEvent) {
+		const target = event.target as HTMLButtonElement
+		if (!target?.dataset.data) return
 
-        const cart = getCartItems()
-        const { ingredients, id } = JSON.parse(target.dataset.data)
-        const items: Item[] = ingredients.map((elem: any) => ({ ...elem, recipes: [id] }))
+		const cart = getCartItems()
+		const { ingredients, id } = JSON.parse(target.dataset.data)
+		const items: Item[] = ingredients.map((elem: any) => ({
+			...elem,
+			recipes: [id],
+		}))
 
-        if (isSomeIngredientsInCart(cart, ingredients, id)) {
-            remove(items, id)
-        } else {
-            addToListCart(items, id)
-        }
+		if (isSomeIngredientsInCart(cart, ingredients, id)) {
+			remove(items, id)
+		} else {
+			addToListCart(items, id)
+		}
 
-        handleCartChange()
-    }
+		handleCartChange()
+	}
 
-    function initializeButton() {
-        const button = document.querySelector("#add-to-cart-button") as HTMLButtonElement
-        if (!button) return
+	function initializeButton() {
+		const button = document.querySelector(
+			"#add-to-cart-button",
+		) as HTMLButtonElement
+		if (!button) return
 
-        button.addEventListener("click", onClick)
-        handleCartChange()
-        window.addEventListener("cartchange", handleCartChange)
-    }
+		button.addEventListener("click", onClick)
+		handleCartChange()
+		window.addEventListener("cartchange", handleCartChange)
+	}
 
-    document.addEventListener("astro:page-load", initializeButton)
-    document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "visible") {
-            initializeButton()
-        }
-    })
+	document.addEventListener("astro:page-load", initializeButton)
+	document.addEventListener("visibilitychange", () => {
+		if (document.visibilityState === "visible") {
+			initializeButton()
+		}
+	})
 </script>
