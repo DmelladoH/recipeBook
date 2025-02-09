@@ -11,12 +11,16 @@ import Cart from "../icons/cart.astro"
 	<Cart />
 </button>
 <aside id="cart-menu" data-visible="false" class="fixed bg-bgSecondary">
-	<div class="mt-16">
+	<div class="mt-10">
 		<header>
-			<h3>Cart 🛒</h3>
-			<button id="clean-button">Remove</button>
+			<h3 class="text-center uppercase">Cart</h3>
 		</header>
-		<section class="cart"></section>
+		<section class="cart p-2"></section>
+		<div class="mt-10 flex justify-center align-middle">
+			<button id="clean-button" class="rounded border-2 px-2 py-1"
+				>Remove all</button
+			>
+		</div>
 	</div>
 </aside>
 
@@ -39,13 +43,13 @@ import Cart from "../icons/cart.astro"
 
 	@media (min-width: 400px) and (max-width: 800px) {
 		#cart-menu {
-			inset: 0 0 0 30%;
+			inset: 0 0 0 40%;
 		}
 	}
 
 	@media (min-width: 800px) {
 		#cart-menu {
-			inset: 0 0 0 80%;
+			inset: 0 0 0 70%;
 		}
 	}
 </style>
@@ -77,6 +81,7 @@ import Cart from "../icons/cart.astro"
 		}
 
 		const ul = document.createElement("ul")
+		ul.setAttribute("class", "grid gap-2")
 
 		ingredient.forEach((ingredient) => {
 			const li = document.createElement("li")
