@@ -58,7 +58,7 @@ export default function CartMenu() {
 				</svg>
 			</button>
 			<aside
-				className={`fixed inset-y-0 right-0 z-40 bg-bgSecondary transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
+				className={`fixed inset-y-0 right-0 z-40 overflow-scroll bg-bgSecondary transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
 			>
 				<div className="mt-10">
 					<header>
