@@ -1,7 +1,8 @@
 ---
 // Supports weights 100-900
 import "@fontsource-variable/raleway"
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from "astro:transitions"
+
 import CartMenu from "../components/cartMenu"
 interface Props {
 	title: string
@@ -27,7 +28,7 @@ const { title } = Astro.props
 					-webkit-backdrop-filter 0.3s ease;
 			}
 		</style>
-		<ViewTransitions fallback="none" />
+		<ClientRouter />
 	</head>
 	<body class="bg-bgPrimary text-black">
 		<slot />

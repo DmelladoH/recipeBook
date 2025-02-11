@@ -7,7 +7,6 @@ import Header from "../components/Header.astro"
 const recipes = Object.values(
 	import.meta.glob("./recipes/*.md", { eager: true }),
 )
-console.log(recipes)
 ---
 
 <Layout title="Recipe Book">
