@@ -18,7 +18,7 @@ ingredients:
       - ["Chiles secos"]
       - ["Maicena"]
       - ["Aceite de chiles"]
-      - ["Cebolleta china"]
+      - ["Cebolleta verde", 1, "pcs"]
 
 picture: "/berenjenas.jpg"
 ---

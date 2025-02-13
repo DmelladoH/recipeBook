@@ -35,7 +35,7 @@ picture: "/crema-calabaza.jpg"
 5. Retiramos la primera capa del puerro y los extremos.
    1. Cortamos el puerro en emince.
 
-### Coción
+### Cocción
 
 1. En una hoya añadimos una capa de aceite y calentamos a fuego medio suave.
 2. Inmediatamente después añadimos el ajo y el jengibre hasta que este dorado.
