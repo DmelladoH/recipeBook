@@ -1,8 +1,7 @@
 # 🍕 Recipe Book
 
 Welcome to **Recipe Book**!
-This is my personal project where I store and organize my favorite recipes. As someone who ❤️ loves cooking, this is a space for me to experiment, share, and savor every dish I create.
-
+This is my personal space where I keep track of all my favorite recipes. As someone who absolutely ❤️ loves cooking, it’s a place for me to experiment, share, and enjoy every dish.
 ---
 
 ## 🔬 Under the Hood
