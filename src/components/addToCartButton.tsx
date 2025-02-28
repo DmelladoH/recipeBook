@@ -13,7 +13,11 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 	const ingredientsList = ingredients
 		.flatMap((elem) => elem.ingredients)
 		.map((elem: ItemTuple) => {
-			return { ingredient: elem[0], quantity: elem[1] ? elem[1] : 1 }
+			return {
+				ingredient: elem[0],
+				quantity: elem[1] ? elem[1] : 1,
+				unit: elem[2],
+			}
 		})
 
 	useEffect(() => {

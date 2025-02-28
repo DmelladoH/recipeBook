@@ -70,7 +70,8 @@ export default function CartMenu() {
 								{ingredients.map((ingredient) => {
 									return (
 										<li key={ingredient.ingredient}>
-											{ingredient.ingredient} x {ingredient.quantity}
+											{ingredient.ingredient} x {ingredient.quantity}{" "}
+											{ingredient.unit}
 										</li>
 									)
 								})}

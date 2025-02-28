@@ -10,7 +10,7 @@ export interface Recipe {
 
 export interface IngredientGroup {
 	title?: string
-	ingredients: any[]
+	ingredients: ItemTuple[]
 }
 
 export interface StepsGroup {
@@ -22,11 +22,16 @@ export interface Item {
 	recipes: string[]
 	ingredient: string
 	quantity: number
+	unit?: Unit
 }
 export interface RecipeWithId extends Recipe {
 	id: string
 }
 
-export type ItemTuple = [string, number | null | undefined]
+export type ItemTuple = [
+	string,
+	number | null | undefined,
+	Unit | null | undefined,
+]
 
 export type Unit = "g" | "ml" | "pcs"

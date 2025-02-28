@@ -22,7 +22,7 @@ const { recipeId, ingredients } = Astro.props
 					{elem.ingredients.map((ingredient) => (
 						<li>
 							{ingredient[1]
-								? `${ingredient[1]} x ${ingredient[0]}`
+								? `${ingredient[1]} ${ingredient[2]} ${ingredient[0]}`
 								: ingredient[0]}
 						</li>
 					))}
