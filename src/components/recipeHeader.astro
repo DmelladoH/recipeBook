@@ -6,10 +6,16 @@ import Back from "../icons/back.astro"
 	id="header"
 	class="transition-blur md:bg-transparent text-x2 fixed z-50 w-screen p-6 md:flex md:backdrop-blur-none"
 >
-	<a href="/" class="hover:text-gray-700 flex gap-2">
-		<Back />
-		<p class="mb-[3px] hidden lg:flex">Volver al menu</p>
-	</a>
+	<div class="flex">
+		<a
+			href="/"
+			class="flex rounded-full bg-bgPrimary p-2 duration-500 hover:scale-105 hover:transform md:gap-2"
+		>
+			<Back />
+			<span class="sr-only">Open Cart</span>
+			<p class="mb-[3px] hidden lg:flex">Volver al menu</p>
+		</a>
+	</div>
 </header>
 
 <script>

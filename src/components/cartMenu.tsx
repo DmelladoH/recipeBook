@@ -91,7 +91,7 @@ function CartButton({
 	return (
 		<button
 			onClick={toggleMenu}
-			className="fixed right-8 top-8 z-50 rounded-full bg-bgPrimary p-2 hover:scale-110 hover:transform"
+			className="fixed right-8 top-8 z-50 rounded-full bg-bgPrimary p-2 duration-500 hover:scale-105 hover:transform"
 			aria-controls="cart-menu"
 			aria-expanded={isOpen}
 		>

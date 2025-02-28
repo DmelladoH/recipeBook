@@ -73,5 +73,12 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		}
 	}
 
-	return <button onClick={addToState}>{displayText}</button>
+	return (
+		<button
+			className="underline duration-500 hover:scale-105 hover:transform"
+			onClick={addToState}
+		>
+			{displayText}
+		</button>
+	)
 }
