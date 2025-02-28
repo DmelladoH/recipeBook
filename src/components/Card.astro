@@ -16,7 +16,17 @@ const { key, img, name, cookingTime, href } = Astro.props
 	class="featured transition-all duration-500 hover:scale-105 md:max-w-80"
 >
 	<a href={href}>
-		<header>
+		<header class="relative">
+			<div
+				class="absolute left-1 top-1 z-50 rounded-xl bg-[rgba(69,55,55,.6)] px-2 py-1"
+			>
+				<div class="flex">
+					<div class="flex gap-2 align-middle text-bgPrimary">
+						<Clock />
+						<span>{cookingTime}'</span>
+					</div>
+				</div>
+			</div>
 			<img
 				src={img}
 				alt={name}
@@ -28,12 +38,6 @@ const { key, img, name, cookingTime, href } = Astro.props
 			<h4 class="text-xl" transition:name={`recipe ${key} title`}>
 				{name}
 			</h4>
-			<div class="flex">
-				<div class="flex gap-2">
-					<Clock />
-					<span>{cookingTime}'</span>
-				</div>
-			</div>
 		</div>
 	</a>
 </article>
