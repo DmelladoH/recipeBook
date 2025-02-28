@@ -21,11 +21,25 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		})
 
 	useEffect(() => {
-		const cart = getCartItems()
-		if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
-			setDisplayText("Eliminar del carro")
-		} else {
-			setDisplayText("Añadir al carro")
+		function loadIngredientsToCart() {
+			const cart = getCartItems()
+			if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
+				setDisplayText("Eliminar del carro")
+			} else {
+				setDisplayText("Añadir al carro")
+			}
+		}
+
+		window.addEventListener("cartchange", () => {
+			loadIngredientsToCart()
+		})
+
+		loadIngredientsToCart()
+
+		return () => {
+			window.removeEventListener("cartchange", () => {
+				loadIngredientsToCart()
+			})
 		}
 	}, [])
 

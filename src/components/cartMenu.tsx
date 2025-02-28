@@ -21,6 +21,12 @@ export default function CartMenu() {
 		}
 
 		loadIngredientsToCart()
+
+		return () => {
+			window.removeEventListener("cartchange", () => {
+				loadIngredientsToCart()
+			})
+		}
 	}, [])
 
 	function removeAllFromCart() {
