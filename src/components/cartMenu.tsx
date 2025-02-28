@@ -41,14 +41,14 @@ export default function CartMenu() {
 				className={`fixed inset-y-0 right-0 z-40 overflow-scroll bg-bgSecondary transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
 			>
 				<div className="mt-10">
-					<header>
-						<h3 className="text-center text-xl uppercase">Cart</h3>
+					<header className="px-5">
+						<h3 className="text-lg font-semibold">Cesta de la compra</h3>
 					</header>
 					<section className="cart mt-10 p-4">
 						{ingredients.length > 0 ? (
 							<IngredientList ingredients={ingredients} />
 						) : (
-							<p className="text-center">El carro esta vacio</p>
+							<p className="text-center">La cesta esta vacia</p>
 						)}
 					</section>
 					<div className="mt-10 flex justify-center">

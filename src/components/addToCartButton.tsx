@@ -24,9 +24,9 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		function loadIngredientsToCart() {
 			const cart = getCartItems()
 			if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
-				setDisplayText("Eliminar del carro")
+				setDisplayText("Eliminar de la cesta")
 			} else {
-				setDisplayText("Añadir al carro")
+				setDisplayText("Añadir a la cesta")
 			}
 		}
 
@@ -66,10 +66,10 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 
 		if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
 			remove(items, recipeId)
-			setDisplayText("Añadir al carro")
+			setDisplayText("Añadir a la cesta")
 		} else {
 			addToListCart(items, recipeId)
-			setDisplayText("Eliminar del carro")
+			setDisplayText("Eliminar de la cesta")
 		}
 	}
 
