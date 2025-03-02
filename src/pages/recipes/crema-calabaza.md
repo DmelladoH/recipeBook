@@ -18,8 +18,6 @@ ingredients:
       - ["Aceite de oliva"]
       - ["Cilantro"]
       - ["Queso parmesano"]
-
-videoId:
 picture: "/crema-calabaza.jpg"
 ---
 

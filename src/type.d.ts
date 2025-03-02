@@ -34,4 +34,9 @@ export type ItemTuple = [
 	Unit | null | undefined,
 ]
 
+export interface Ingredient {
+	ingredient: string
+	quantity: number
+	unit: Unit | null | undefined
+}
 export type Unit = "g" | "ml" | "pcs"

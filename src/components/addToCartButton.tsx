@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { addToListCart, getCartItems, remove } from "../store"
-import type { IngredientGroup, ItemTuple } from "../type"
+import type { Ingredient, IngredientGroup, Item, ItemTuple } from "../type"
 
 interface Props {
 	recipeId: string
@@ -9,7 +9,6 @@ interface Props {
 
 export function AddToCartButton({ ingredients, recipeId }: Props) {
 	const [displayText, setDisplayText] = useState<string | undefined>()
-
 	const ingredientsList = ingredients
 		.flatMap((elem) => elem.ingredients)
 		.map((elem: ItemTuple) => {
@@ -21,12 +20,16 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		})
 
 	useEffect(() => {
-		function loadIngredientsToCart() {
-			const cart = getCartItems()
-			if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
-				setDisplayText("Eliminar de la cesta")
-			} else {
-				setDisplayText("Añadir a la cesta")
+		async function loadIngredientsToCart() {
+			try {
+				const cart = await getCartItems()
+				if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
+					setDisplayText("Eliminar de la cesta")
+				} else {
+					setDisplayText("Añadir a la cesta")
+				}
+			} catch (e) {
+				console.log(e)
 			}
 		}
 
@@ -44,8 +47,8 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 	}, [])
 
 	const isSomeIngredientsInCart = (
-		cart: any[],
-		ingredientsToAdd: any[],
+		cart: Item[],
+		ingredientsToAdd: Ingredient[],
 		recipeId: string,
 	) => {
 		return cart.some((cartItem) =>
@@ -57,19 +60,22 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		)
 	}
 
-	const addToState = () => {
-		const cart = getCartItems()
-		const items = ingredientsList.map((elem: any) => ({
-			...elem,
-			recipes: [recipeId],
-		}))
-
-		if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
-			remove(items, recipeId)
-			setDisplayText("Añadir a la cesta")
-		} else {
-			addToListCart(items, recipeId)
-			setDisplayText("Eliminar de la cesta")
+	const addToState = async () => {
+		try {
+			const cart = await getCartItems()
+			const items = ingredientsList.map((elem: any) => ({
+				...elem,
+				recipes: [recipeId],
+			}))
+			if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
+				remove(items, recipeId)
+				setDisplayText("Añadir a la cesta")
+			} else {
+				addToListCart(items, recipeId)
+				setDisplayText("Eliminar de la cesta")
+			}
+		} catch (e) {
+			console.log(e)
 		}
 	}
 
