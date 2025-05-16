@@ -1,14 +1,14 @@
 import type { Item } from "./type"
 
-export async function getCartItems(): Promise<Item[]> {
-	const data = await localStorage.getItem("cart")
+export function getCartItems(): Item[] {
+	const data = localStorage.getItem("cart")
 	if (!data) return []
-	return await JSON.parse(data)
+	return JSON.parse(data)
 }
 
-export async function addToListCart(list: Item[], recipeId: string) {
+export function addToListCart(list: Item[], recipeId: string) {
 	try {
-		const currentCart = await getCartItems()
+		const currentCart = getCartItems()
 
 		list.map((elem) => {
 			const elemInList = currentCart.find(
@@ -32,9 +32,9 @@ export async function addToListCart(list: Item[], recipeId: string) {
 	}
 }
 
-export async function remove(list: Item[], recipeId: string) {
+export function remove(list: Item[], recipeId: string) {
 	try {
-		const currentCart = await getCartItems()
+		const currentCart = getCartItems()
 		list.forEach((elem) => {
 			const elemInList = currentCart.find(
 				(a) => a?.ingredient === elem.ingredient,
@@ -60,7 +60,7 @@ export async function remove(list: Item[], recipeId: string) {
 	}
 }
 
-export async function cleanAll() {
+export function cleanAll() {
 	localStorage.removeItem("cart")
 	window.dispatchEvent(new Event("cartchange"))
 }

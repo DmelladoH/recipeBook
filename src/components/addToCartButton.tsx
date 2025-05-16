@@ -20,9 +20,9 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		})
 
 	useEffect(() => {
-		async function loadIngredientsToCart() {
+		function loadIngredientsToCart() {
 			try {
-				const cart = await getCartItems()
+				const cart = getCartItems()
 				if (isSomeIngredientsInCart(cart, ingredientsList, recipeId)) {
 					setDisplayText("Eliminar de la cesta")
 				} else {
@@ -60,9 +60,9 @@ export function AddToCartButton({ ingredients, recipeId }: Props) {
 		)
 	}
 
-	const addToState = async () => {
+	const addToState = () => {
 		try {
-			const cart = await getCartItems()
+			const cart = getCartItems()
 			const items = ingredientsList.map((elem: any) => ({
 				...elem,
 				recipes: [recipeId],
