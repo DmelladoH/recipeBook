@@ -7,6 +7,8 @@ import Header from "../components/Header.astro"
 const recipes = Object.values(
 	import.meta.glob("./recipes/*.md", { eager: true }),
 )
+
+const basics = Object.values(import.meta.glob("./basics/*.md", { eager: true }))
 ---
 
 <Layout title="Recipe Book">
@@ -22,6 +24,22 @@ const recipes = Object.values(
 							img={recipe.frontmatter.picture}
 							name={recipe.frontmatter.title}
 							href={`recipes/${recipe.frontmatter.id}`}
+							cookingTime={recipe.frontmatter.cookingTime}
+						/>
+					))
+				}
+			</div>
+		</section>
+		<section class="mt-10 p-5 md:mx-20">
+			<h2 class="text-xl font-bold md:text-3xl">Base</h2>
+			<div class="gallery mt-4">
+				{
+					basics.map((recipe: any) => (
+						<Card
+							key={recipe.frontmatter.id}
+							img={recipe.frontmatter.picture}
+							name={recipe.frontmatter.title}
+							href={`basics/${recipe.frontmatter.id}`}
 							cookingTime={recipe.frontmatter.cookingTime}
 						/>
 					))
