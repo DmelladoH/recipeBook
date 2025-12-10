@@ -38,7 +38,7 @@ export default function CartMenu() {
 		<>
 			<CartButton toggleMenu={toggleMenu} isOpen={isOpen} />
 			<aside
-				className={`fixed inset-y-0 right-0 z-40 overflow-scroll bg-bgSecondary transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
+				className={`bg-bg-secondary fixed inset-y-0 right-0 z-40 overflow-scroll transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
 			>
 				<div className="mt-10">
 					<header className="px-5">
@@ -91,7 +91,7 @@ function CartButton({
 	return (
 		<button
 			onClick={toggleMenu}
-			className="fixed right-8 top-8 z-50 rounded-full bg-bgPrimary p-2 duration-500 hover:scale-105 hover:transform"
+			className="bg-bg-primary fixed top-8 right-8 z-50 rounded-full p-2 duration-500 hover:scale-105 hover:transform"
 			aria-controls="cart-menu"
 			aria-expanded={isOpen}
 		>

@@ -1,3 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+	--color-bg-primary: #f1eddd;
+	--color-bg-secondary: #eee29d;
+	--color-black: #230f0f;
+	--color-primary: #3b1a18;
+	--color-secondary: #b05138;
+}
+
 .gallery {
 	display: grid;
 	gap: 1rem;

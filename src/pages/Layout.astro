@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css"
+
 // Supports weights 100-900
 import "@fontsource-variable/raleway"
 import { ClientRouter } from "astro:transitions"
@@ -30,7 +32,7 @@ const { title } = Astro.props
 		</style>
 		<ClientRouter />
 	</head>
-	<body class="bg-bgPrimary text-black">
+	<body class="bg-bg-primary text-black">
 		<slot />
 		<CartMenu client:load />
 	</body>
