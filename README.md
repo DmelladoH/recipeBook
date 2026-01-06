@@ -15,5 +15,6 @@ This app is built with:
 
 ---
 
-## 🎨 Customization
+## 🎨 Customization
+
 Feel free to fork this repository and personalize it with your own style, features and recipes. Add new recipes, experiment with layouts, and make it truly yours!
