@@ -39,4 +39,4 @@ export interface Ingredient {
 	quantity: number
 	unit: Unit | null | undefined
 }
-export type Unit = "g" | "ml" | "pcs"
+export type Unit = "g" | "ml" | "pcs" | "cucharada"
