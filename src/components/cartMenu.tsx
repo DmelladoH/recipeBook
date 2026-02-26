@@ -68,12 +68,45 @@ export default function CartMenu() {
 }
 
 function IngredientList({ ingredients }: { ingredients: Item[] }) {
+	const [checked, setChecked] = useState<Set<string>>(new Set())
+
+	const toggleChecked = (key: string) => {
+		setChecked((prev) => {
+			const next = new Set(prev)
+			if (next.has(key)) {
+				next.delete(key)
+			} else {
+				next.add(key)
+			}
+			return next
+		})
+	}
+
+	const sorted = [...ingredients].sort((a, b) => {
+		const aChecked = checked.has(a.ingredient)
+		const bChecked = checked.has(b.ingredient)
+		if (aChecked === bChecked) return 0
+		return aChecked ? 1 : -1
+	})
+
 	return (
 		<ul className="grid gap-1">
-			{ingredients.map((ingredient) => {
+			{sorted.map((ingredient) => {
+				const isChecked = checked.has(ingredient.ingredient)
 				return (
 					<li key={ingredient.ingredient}>
-						{ingredient.ingredient} x {ingredient.quantity} {ingredient.unit}
+						<label className="flex cursor-pointer items-center gap-2">
+							<input
+								type="checkbox"
+								checked={isChecked}
+								onChange={() => toggleChecked(ingredient.ingredient)}
+								className="h-4 w-4 accent-current"
+							/>
+							<span className={isChecked ? "line-through opacity-50" : ""}>
+								{ingredient.ingredient} x {ingredient.quantity}{" "}
+								{ingredient.unit}
+							</span>
+						</label>
 					</li>
 				)
 			})}
