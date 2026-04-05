@@ -24,3 +24,12 @@
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 }
+
+:root {
+	a {
+		color: #520ce4;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
