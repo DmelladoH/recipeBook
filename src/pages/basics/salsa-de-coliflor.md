@@ -1,7 +1,7 @@
 ---
 layout: "../../layout/recipeLayout.astro"
 id: "salsa-de-coliflor"
-title: "Salsa de pimienta"
+title: "Salsa de coliflor"
 cookingTime: 60
 ingredients:
   - ingredients:
