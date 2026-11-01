@@ -38,17 +38,19 @@ export default function CartMenu() {
 		<>
 			<CartButton toggleMenu={toggleMenu} isOpen={isOpen} />
 			<aside
-				className={`bg-bg-secondary fixed inset-y-0 right-0 z-40 overflow-scroll transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
+				className={`bg-bg-secondary fixed inset-y-0 right-0 z-40 overflow-scroll transition-transform duration-300 md:rounded-l-3xl ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
 			>
 				<div className="mt-10">
 					<header className="px-5">
-						<h3 className="text-lg font-semibold">Cesta de la compra</h3>
+						<h3 className="text-center text-lg font-semibold">
+							Cesta de la compra
+						</h3>
 					</header>
 					<section className="cart mt-10 p-4">
 						{ingredients.length > 0 ? (
 							<IngredientList ingredients={ingredients} />
 						) : (
-							<p className="text-center">La cesta esta vacia</p>
+							<p className="text-center">La cesta está vacía</p>
 						)}
 					</section>
 					<div className="mt-10 flex justify-center">
