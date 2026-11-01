@@ -29,6 +29,18 @@ export default function CartMenu() {
 		}
 	}, [])
 
+	useEffect(() => {
+		if (!isOpen) return
+
+		const onKeyDown = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setIsOpen(false)
+		}
+
+		window.addEventListener("keydown", onKeyDown)
+
+		return () => window.removeEventListener("keydown", onKeyDown)
+	}, [isOpen])
+
 	function removeAllFromCart() {
 		cleanAll()
 		setIngredients([])
@@ -37,7 +49,13 @@ export default function CartMenu() {
 	return (
 		<>
 			<CartButton toggleMenu={toggleMenu} isOpen={isOpen} />
+			<div
+				onClick={() => setIsOpen(false)}
+				aria-hidden="true"
+				className={`fixed inset-0 z-30 bg-black/50 transition-opacity duration-300 ${isOpen ? "opacity-100" : "pointer-events-none opacity-0"}`}
+			/>
 			<aside
+				id="cart-menu"
 				className={`bg-bg-secondary fixed inset-y-0 right-0 z-40 overflow-scroll transition-transform duration-300 md:rounded-l-3xl ${isOpen ? "translate-x-0" : "translate-x-full"} w-full sm:w-[60%] lg:w-[30%]`}
 			>
 				<div className="mt-10">
